@@ -1,152 +1,982 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <!-- МЕТАТЕГ для Яндекса -->
-  <meta name="yandex-verification" content="c45502c8e3bdf50d" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Limit Vape Барахолка Кострома</title>
-  <meta name="description" content="Limit Vape — главная барахолка вейп индустрии Костромы и области. Модерация, розыгрыши, отзывчивое сообщество, честные сделки, экосистема для всех любителей вейпа!">
-  <meta name="keywords" content="вейп барахолка кострома, limit vape, купить вейп кострома, продажа вейпов кострома, вейп сообщество кострома, барахолка, модерация, розыгрыши, отзывчивые участники, обмен вейпов кострома, vape market kostroma">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:800,700,400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #F7678B 0%, #F178B6 45%, #91306F 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: #fff;
+  <meta name="theme-color" content="#0c0912">
+  <meta name="color-scheme" content="dark">
+  <meta name="yandex-verification" content="c45502c8e3bdf50d">
+
+  <title>Limit — вейп-барахолка Костромы в Telegram</title>
+  <meta name="description" content="Limit — локальная Telegram-барахолка для совершеннолетнего вейп-сообщества Костромы и области. Объявления, обмен, общение и модерация в одном месте.">
+  <meta name="keywords" content="вейп барахолка Кострома, Limit Vape, Telegram барахолка Кострома, вейп сообщество Кострома">
+  <link rel="canonical" href="https://vapestorebro.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Limit">
+  <meta property="og:title" content="Limit — барахолка Костромы в Telegram">
+  <meta property="og:description" content="Локальные объявления, понятные правила и живое сообщество. Присоединяйся к Limit в Telegram. Только 18+.">
+  <meta property="og:url" content="https://vapestorebro.github.io/">
+  <meta property="og:image" content="https://vapestorebro.github.io/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Limit",
+      "url": "https://vapestorebro.github.io/",
+      "description": "Локальное Telegram-сообщество объявлений для совершеннолетних жителей Костромы и области.",
+      "inLanguage": "ru-RU"
     }
-    .card {
-      background: rgba(30, 20, 40, 0.89);
-      border-radius: 32px;
-      box-shadow: 0 0 88px rgba(247,103,139,0.17), 0 4px 24px rgba(147,48,111,0.17);
-      padding: 46px 32px 32px 32px;
-      text-align: center;
-      max-width: 420px;
-      width: 90vw;
+  </script>
+
+  <style>
+    :root {
+      --bg: #0c0912;
+      --surface: rgba(28, 22, 38, 0.76);
+      --surface-strong: #17121f;
+      --line: rgba(255, 255, 255, 0.10);
+      --text: #fff9fc;
+      --muted: #bdb4c7;
+      --pink: #ff4f91;
+      --pink-light: #ff8db8;
+      --violet: #9a5cff;
+      --telegram: #2aabee;
+      --green: #62d7a4;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
+      --radius: 28px;
     }
 
-    .logo {
-      width: 158px;
-      height: 158px;
-      margin-bottom: 15px;
-      border-radius: 24px;
-      object-fit: cover;
-      box-shadow: 0 8px 26px rgba(247,103,139,0.21);
-      border: 5px solid #f7678b;
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(255, 79, 145, 0.18), transparent 30rem),
+        radial-gradient(circle at 88% 18%, rgba(154, 92, 255, 0.16), transparent 32rem),
+        var(--bg);
+      font-family: Inter, Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 20;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #170d16;
       background: #fff;
+      transform: translateY(-150%);
     }
-    .title {
-      font-weight: 900;
-      font-size: 2.2rem;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-      color: #F7678B;
-      text-shadow: 0 4px 44px rgba(241,120,182,0.28);
-      line-height: 1.1em;
+
+    .skip-link:focus {
+      transform: translateY(0);
     }
-    .subtitle {
-      font-size: 1.08rem;
-      margin-bottom: 24px;
-      color: #fee6ee;
-      font-weight: 400;
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
     }
-    .features {
-      font-size: 1rem;
-      background: rgba(225, 61, 130, 0.12);
-      border-radius: 14px;
-      padding: 16px;
-      margin-bottom: 22px;
-      color: #ffd5eb;
-      font-weight: 500;
-      text-align: left;
-      box-shadow: 0 4px 18px rgba(147, 48, 111, 0.07);
-    }
-    .features li {
-      margin-bottom: 8px;
-      list-style: none;
+
+    .site-header {
       position: relative;
-      padding-left: 0;
+      z-index: 5;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      min-height: 86px;
     }
-    .icon {
-      margin-right: 7px;
-      font-size: 1.18em;
-      vertical-align: middle;
-      filter: drop-shadow(0 1px 2px #fdc9e3);
-      flex-shrink: 0;
-    }
-    .telegram-link {
-      display: inline-block;
-      background: linear-gradient(90deg, #F7678B 0%, #F178B6 100%);
-      border-radius: 20px;
-      padding: 19px 36px;
-      font-size: 1.23rem;
-      color: #fff;
-      font-weight: 800;
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
       text-decoration: none;
-      letter-spacing: 2px;
-      box-shadow: 0 8px 28px rgba(247,103,139,0.19);
+      text-transform: uppercase;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 13px;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(255, 79, 145, 0.22);
+    }
+
+    .age-badge,
+    .eyebrow,
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+    }
+
+    .age-badge {
+      padding: 8px 12px;
+      color: #e9e1ee;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .age-badge b {
+      color: var(--pink-light);
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(330px, 0.9fr);
+      gap: clamp(34px, 7vw, 92px);
+      align-items: center;
+      min-height: calc(100vh - 86px);
+      min-height: calc(100svh - 86px);
+      padding: 48px 0 92px;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 7% auto auto 47%;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: rgba(255, 79, 145, 0.13);
+      filter: blur(90px);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-copy,
+    .hero-card {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      margin-bottom: 22px;
+      padding: 9px 13px;
+      color: #ddd2e5;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before,
+    .status::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 16px rgba(98, 215, 164, 0.75);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-size: clamp(3rem, 7.5vw, 6.5rem);
+      font-weight: 900;
+      letter-spacing: -0.065em;
+      line-height: 0.92;
+    }
+
+    .accent {
+      color: transparent;
+      background: linear-gradient(110deg, var(--pink-light), var(--pink) 48%, #bb7aff);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .lead {
+      max-width: 650px;
+      margin-bottom: 30px;
+      color: #d7cfdd;
+      font-size: clamp(1.05rem, 2vw, 1.26rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 58px;
+      padding: 0 22px;
+      border: 1px solid transparent;
+      border-radius: 17px;
+      font-size: 0.98rem;
+      font-weight: 850;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button:focus-visible,
+    summary:focus-visible,
+    .brand:focus-visible {
+      outline: 3px solid rgba(42, 171, 238, 0.72);
+      outline-offset: 4px;
+    }
+
+    .button-primary {
+      color: #fff;
+      background: linear-gradient(115deg, #168ed4, var(--telegram));
+      box-shadow: 0 16px 42px rgba(42, 171, 238, 0.28);
+    }
+
+    .button-primary:hover {
+      box-shadow: 0 20px 50px rgba(42, 171, 238, 0.4);
+    }
+
+    .button-secondary {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .button-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+
+    .telegram-icon {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .trust-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-row span::before {
+      color: var(--green);
+      content: "✓";
+      font-weight: 900;
+    }
+
+    .hero-card {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 36px;
+      background: linear-gradient(150deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      transform: rotate(1.5deg);
+    }
+
+    .hero-card-inner {
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      background: #120e19;
+    }
+
+    .preview-head {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .preview-head img {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+
+    .preview-head strong,
+    .preview-head span {
+      display: block;
+    }
+
+    .preview-head strong {
+      font-size: 1.02rem;
+    }
+
+    .preview-head span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .status {
+      margin-left: auto;
+      padding: 6px 9px;
+      color: #d7f8e9;
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .status::before {
+      width: 6px;
+      height: 6px;
+    }
+
+    .preview-body {
+      display: grid;
+      gap: 11px;
+      padding: 18px;
+    }
+
+    .message {
+      width: 89%;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 18px 18px 18px 6px;
+      background: #201828;
+    }
+
+    .message:nth-child(2) {
+      margin-left: auto;
+      border-radius: 18px 18px 6px;
+      background: linear-gradient(135deg, rgba(255, 79, 145, 0.22), rgba(154, 92, 255, 0.16));
+    }
+
+    .message:nth-child(3) {
+      width: 78%;
+    }
+
+    .message-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--pink-light);
+      font-size: 0.7rem;
+      font-weight: 850;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .message p {
+      margin-bottom: 9px;
+      color: #ece5f0;
+      font-size: 0.87rem;
+      line-height: 1.45;
+    }
+
+    .message small {
+      color: #93899c;
+    }
+
+    .card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 4px 18px 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      color: #fff;
+      background: linear-gradient(110deg, #168ed4, var(--telegram));
+      font-size: 0.88rem;
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 104px 0;
+    }
+
+    .section-kicker {
+      margin-bottom: 12px;
+      color: var(--pink-light);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 800px;
       margin-bottom: 18px;
-      transition: background 0.21s, box-shadow 0.18s, transform 0.12s;
-      border: none;
+      font-size: clamp(2rem, 5vw, 4.1rem);
+      letter-spacing: -0.045em;
+      line-height: 1.02;
     }
-    .telegram-link:hover {
-      background: linear-gradient(90deg, #c92254 0%, #F7678B 100%);
-      box-shadow: 0 8px 33px rgba(241,120,182,0.34);
-      transform: scale(1.04);
+
+    .section-lead {
+      max-width: 690px;
+      margin-bottom: 42px;
+      color: var(--muted);
+      font-size: 1.05rem;
     }
-    .tags {
-      margin-top: 0px;
-      margin-bottom: 2px;
-      font-size: 0.98em;
-      color: #fdc9e3;
-      font-weight: bold;
-      letter-spacing: 1.2px;
-      word-break: break-word;
-      opacity: 0.90;
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
-    .footer {
-      margin-top: 20px;
-      font-size: 0.93em;
-      color: #f1b3cc;
+
+    .feature-card {
+      min-height: 250px;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 18px 56px rgba(0, 0, 0, 0.18);
     }
-    @media (max-width: 600px) {
-      .logo { width: 78vw; height: 78vw; max-width: 155px; max-height: 155px;}
-      .card { padding: 18vw 2vw 9vw 2vw; }
-      .title { font-size: 1.4rem;}
+
+    .feature-icon {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 35px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      background: rgba(255, 79, 145, 0.12);
+      font-size: 1.35rem;
+    }
+
+    .feature-card:nth-child(2) .feature-icon {
+      background: rgba(42, 171, 238, 0.12);
+    }
+
+    .feature-card:nth-child(3) .feature-icon {
+      background: rgba(98, 215, 164, 0.12);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 9px;
+      font-size: 1.22rem;
+    }
+
+    .feature-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      counter-reset: steps;
+    }
+
+    .step {
+      position: relative;
+      min-height: 210px;
+      padding: 28px 32px 28px 0;
+      border-top: 1px solid var(--line);
+      counter-increment: steps;
+    }
+
+    .step:not(:last-child) {
+      margin-right: 28px;
+    }
+
+    .step::before {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 28px;
+      place-items: center;
+      border-radius: 50%;
+      color: #130c14;
+      background: var(--pink-light);
+      content: counter(steps, decimal-leading-zero);
+      font-size: 0.76rem;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+      font-size: 1.14rem;
+    }
+
+    .step p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 90% 0, rgba(42, 171, 238, 0.28), transparent 17rem),
+        linear-gradient(125deg, rgba(255, 79, 145, 0.24), rgba(154, 92, 255, 0.16));
+      box-shadow: var(--shadow);
+    }
+
+    .cta-panel h2 {
+      max-width: 700px;
+      margin-bottom: 12px;
+      font-size: clamp(2rem, 4.8vw, 3.8rem);
+    }
+
+    .cta-panel p {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: #d7cfdd;
+    }
+
+    .faq-list {
+      max-width: 880px;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+    }
+
+    details:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      position: relative;
+      padding: 24px 50px 24px 0;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      color: var(--pink-light);
+      content: "+";
+      font-size: 1.7rem;
+      font-weight: 400;
+      transform: translateY(-52%);
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      max-width: 730px;
+      padding: 0 50px 23px 0;
+      color: var(--muted);
+    }
+
+    .site-footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: end;
+      padding: 40px 0 108px;
+      border-top: 1px solid var(--line);
+      color: #8f8797;
+      font-size: 0.78rem;
+    }
+
+    .footer-brand {
+      margin-bottom: 10px;
+      color: var(--text);
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .disclaimer {
+      max-width: 700px;
+      margin-bottom: 0;
+    }
+
+    .footer-link {
+      color: #c8bdcf;
+      font-weight: 750;
+      text-underline-offset: 3px;
+    }
+
+    .mobile-cta {
+      position: fixed;
+      right: 14px;
+      bottom: calc(14px + env(safe-area-inset-bottom));
+      left: 14px;
+      z-index: 10;
+      display: none;
+      min-height: 56px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 17px;
+      color: #fff;
+      background: linear-gradient(110deg, #168ed4, var(--telegram));
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
+      font-weight: 850;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 62px;
+      }
+
+      .hero-copy {
+        max-width: 740px;
+      }
+
+      .hero-card {
+        width: min(520px, 100%);
+        margin-inline: auto;
+        transform: none;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card {
+        min-height: 0;
+      }
+
+      .feature-icon {
+        margin-bottom: 24px;
+      }
+
+      .cta-panel {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .site-header {
+        min-height: 74px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 42px 0 72px;
+      }
+
+      h1 {
+        font-size: clamp(2.7rem, 15vw, 4.5rem);
+      }
+
+      .actions {
+        display: grid;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .trust-row {
+        display: grid;
+      }
+
+      .hero-card {
+        padding: 10px;
+        border-radius: 27px;
+      }
+
+      .preview-head {
+        padding: 15px;
+      }
+
+      .status {
+        display: none;
+      }
+
+      .preview-body {
+        padding: 15px;
+      }
+
+      .section {
+        padding: 76px 0;
+      }
+
+      .feature-card {
+        padding: 23px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .step:not(:last-child) {
+        margin-right: 0;
+      }
+
+      .step {
+        min-height: 0;
+        padding-right: 0;
+      }
+
+      .cta-panel {
+        padding: 30px 22px;
+        border-radius: 26px;
+      }
+
+      .site-footer {
+        grid-template-columns: 1fr;
+        padding-bottom: 110px;
+      }
+
+      .mobile-cta {
+        display: flex;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="logo.png" alt="Логотип Limit Vape" class="logo">
-    <div class="title">Limit Vape Барахолка Костромы и области</div>
-    <div class="subtitle">
-      Главная платформа по обмену и продаже вейп-девайсов и жидкостей для Костромы и области.<br>
-      Заходи — и будь частью самого трушного комьюнити!
-    </div>
-    <ul class="features">
-      <li><span class="icon">🔥</span>Лучшая модерация — никакого скама, только честные сделки</li>
-      <li><span class="icon">🔥</span>Отзывчивые участники — всегда помогут и подскажут</li>
-      <li><span class="icon">🔥</span>Постоянные розыгрыши — шанс урвать ништяки бесплатно!</li>
-      <li><span class="icon">🔥</span>Свежие новости, анонсы и эксклюзивные предложения</li>
-      <li><span class="icon">🔥</span>Только актуальные лоты — устройства, жидкости на любой вкус</li>
-      <li><span class="icon">🔥</span>FAQ, помощь новичкам и просто приятное комьюнити!</li>
-    </ul>
-    <a class="telegram-link" target="_blank" href="https://t.me/+MUNkwzI-ieoxOGRi">
-      Вступить
+  <a class="skip-link" href="#main">К основному содержанию</a>
+
+  <header class="site-header container">
+    <a class="brand" href="#top" aria-label="Limit — наверх">
+      <img src="logo.png" alt="" width="42" height="42">
+      <span>Limit</span>
     </a>
-    <div class="tags">#вейп #барахолка #кострома #область #LimitVape #vape #market #розыгрыш #модерация #комьюнити #жидкости #девайсы #отзывы #честные_сделки #продажа_вейпов_кострома #купить_вейп_кострома</div>
-    <div class="footer">
-      © Limit Vape | Кострома и область | 2026
+    <div class="age-badge"><b>18+</b> Только для взрослых</div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow">Кострома и область · Telegram</div>
+        <h1>Барахолка, где объявления <span class="accent">не теряются</span></h1>
+        <p class="lead">Локальное сообщество для совершеннолетних: публикуй объявления, находи нужное рядом и общайся напрямую — с понятными правилами и модерацией.</p>
+        <div class="actions">
+          <a class="button button-primary telegram-cta" href="https://t.me/+MUNkwzI-ieoxOGRi" target="_blank" rel="noopener noreferrer" aria-label="Открыть барахолку Limit в Telegram">
+            <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 3.4a1.5 1.5 0 0 0-1.55-.24L3.2 9.7c-1.16.45-1.14 1.1-.2 1.38l4.35 1.36 1.68 5.12c.2.58.1.8.7.8.47 0 .68-.21.94-.47l2.1-2.04 4.38 3.23c.8.45 1.38.22 1.58-.75L21.6 4.78c.3-1.18-.45-1.72.1-1.38ZM8.04 12.14l9.92-6.26c.5-.3.95-.14.58.19l-8.2 7.4-.32 3.39-1.98-4.72Z"/></svg>
+            Открыть в Telegram
+          </a>
+          <a class="button button-secondary" href="#why">Почему Limit</a>
+        </div>
+        <div class="trust-row" role="group" aria-label="Преимущества">
+          <span>Локально</span>
+          <span>С модерацией</span>
+          <span>Без лишних регистраций</span>
+        </div>
+      </div>
+
+      <div class="hero-card" role="group" aria-label="Пример ленты сообщества">
+        <div class="hero-card-inner">
+          <div class="preview-head">
+            <img src="logo.png" alt="Логотип Limit" width="52" height="52">
+            <div>
+              <strong>Limit · Кострома</strong>
+              <span>барахолка и сообщество</span>
+            </div>
+            <div class="status">онлайн</div>
+          </div>
+          <div class="preview-body">
+            <div class="message">
+              <span class="message-label">Новое объявление</span>
+              <p>Свежие публикации собраны в одной понятной ленте.</p>
+              <small>только что</small>
+            </div>
+            <div class="message">
+              <span class="message-label">Рядом</span>
+              <p>Кострома и область — проще договориться без лишней логистики.</p>
+              <small>локальное сообщество</small>
+            </div>
+            <div class="message">
+              <span class="message-label">Порядок</span>
+              <p>Правила, модерация и помощь участникам.</p>
+              <small>Limit</small>
+            </div>
+          </div>
+          <a class="card-cta telegram-cta" href="https://t.me/+MUNkwzI-ieoxOGRi" target="_blank" rel="noopener noreferrer">
+            <span>Перейти в сообщество</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="why">
+      <p class="section-kicker">Почему сюда возвращаются</p>
+      <h2>Всё нужное — без шума и лишних движений</h2>
+      <p class="section-lead">Limit объединяет локальные объявления и живое общение в привычном Telegram. Быстрый вход, понятная лента и люди из твоего города.</p>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">⌁</div>
+          <h3>Локальные объявления</h3>
+          <p>Кострома и область в одном месте — легче найти предложение рядом и договориться напрямую.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">◉</div>
+          <h3>Понятные правила</h3>
+          <p>Модерация помогает поддерживать порядок, убирать спам и делать ленту полезнее для участников.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">✦</div>
+          <h3>Живое сообщество</h3>
+          <p>Обсуждения, помощь, новости и анонсы — всё внутри одного Telegram-пространства.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <p class="section-kicker">Как начать</p>
+      <h2>Три шага — и ты внутри</h2>
+      <p class="section-lead">Никаких анкет и отдельных приложений. Нужен только Telegram и подтверждение совершеннолетия.</p>
+
+      <div class="steps">
+        <article class="step">
+          <h3>Открой Telegram</h3>
+          <p>Нажми на любую синюю кнопку на странице — ссылка сразу откроет сообщество.</p>
+        </article>
+        <article class="step">
+          <h3>Ознакомься с правилами</h3>
+          <p>Они помогают участникам общаться спокойно и публиковать объявления в едином формате.</p>
+        </article>
+        <article class="step">
+          <h3>Смотри или публикуй</h3>
+          <p>Следи за новыми объявлениями, задавай вопросы и размещай своё предложение.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="cta-panel">
+        <div>
+          <p class="section-kicker">Limit в Telegram</p>
+          <h2>Не листай мимо — загляни в ленту</h2>
+          <p>Новые объявления появляются в Telegram. Открой сообщество и посмотри, что актуально сегодня в Костроме.</p>
+        </div>
+        <a class="button button-primary telegram-cta" href="https://t.me/+MUNkwzI-ieoxOGRi" target="_blank" rel="noopener noreferrer">
+          <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 3.4a1.5 1.5 0 0 0-1.55-.24L3.2 9.7c-1.16.45-1.14 1.1-.2 1.38l4.35 1.36 1.68 5.12c.2.58.1.8.7.8.47 0 .68-.21.94-.47l2.1-2.04 4.38 3.23c.8.45 1.38.22 1.58-.75L21.6 4.78c.3-1.18-.45-1.72.1-1.38ZM8.04 12.14l9.92-6.26c.5-.3.95-.14.58.19l-8.2 7.4-.32 3.39-1.98-4.72Z"/></svg>
+          Перейти в Limit
+        </a>
+      </div>
+    </section>
+
+    <section class="section container">
+      <p class="section-kicker">Коротко о главном</p>
+      <h2>Частые вопросы</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Как вступить в сообщество?</summary>
+          <p>Нажми «Открыть в Telegram» или «Перейти в Limit». Telegram покажет страницу сообщества и предложит присоединиться.</p>
+        </details>
+        <details>
+          <summary>Limit работает только в Костроме?</summary>
+          <p>Основная аудитория — Кострома и Костромская область, поэтому большинство объявлений и обсуждений ориентировано на местных участников.</p>
+        </details>
+        <details>
+          <summary>Как проходят сделки?</summary>
+          <p>Участники договариваются напрямую. Проверяй информацию, не отправляй предоплату незнакомым людям и сообщай модераторам о подозрительной активности.</p>
+        </details>
+        <details>
+          <summary>Есть возрастное ограничение?</summary>
+          <p>Да. Сайт и сообщество предназначены исключительно для совершеннолетних пользователей — 18+.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div>
+      <div class="footer-brand">Limit</div>
+      <p class="disclaimer">Информационная страница локального сообщества. Limit не является интернет-магазином и не выступает стороной сделок. Никотин вызывает зависимость. Материалы предназначены только для лиц старше 18 лет.</p>
     </div>
-  </div>
+    <div>
+      <a class="footer-link telegram-cta" href="https://t.me/+MUNkwzI-ieoxOGRi" target="_blank" rel="noopener noreferrer">Telegram ↗</a><br>
+      <span>© <span id="year">2026</span> Limit</span>
+    </div>
+  </footer>
+
+  <a class="mobile-cta telegram-cta" href="https://t.me/+MUNkwzI-ieoxOGRi" target="_blank" rel="noopener noreferrer" aria-label="Открыть Limit в Telegram">
+    <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 3.4a1.5 1.5 0 0 0-1.55-.24L3.2 9.7c-1.16.45-1.14 1.1-.2 1.38l4.35 1.36 1.68 5.12c.2.58.1.8.7.8.47 0 .68-.21.94-.47l2.1-2.04 4.38 3.23c.8.45 1.38.22 1.58-.75L21.6 4.78c.3-1.18-.45-1.72.1-1.38ZM8.04 12.14l9.92-6.26c.5-.3.95-.14.58.19l-8.2 7.4-.32 3.39-1.98-4.72Z"/></svg>
+    Открыть Telegram
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
