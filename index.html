@@ -7,16 +7,17 @@
   <meta name="color-scheme" content="dark">
   <meta name="yandex-verification" content="c45502c8e3bdf50d">
 
-  <title>Limit — вейп-барахолка Костромы в Telegram</title>
-  <meta name="description" content="Limit — локальная Telegram-барахолка для совершеннолетнего вейп-сообщества Костромы и области. Объявления, обмен, общение и модерация в одном месте.">
-  <meta name="keywords" content="вейп барахолка Кострома, Limit Vape, Telegram барахолка Кострома, вейп сообщество Кострома">
+  <title>Вейп-барахолка Костромы в Telegram — Limit Vape | 18+</title>
+  <meta name="description" content="Limit Vape — живая вейп-барахолка Костромы и области в Telegram: локальные объявления, репутация участников, модерация и более 1 000 участников. Только 18+.">
+  <meta name="keywords" content="вейп барахолка Кострома, Limit Vape Кострома, вейп барахолка Telegram, вейп сообщество Кострома, объявления Кострома">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://vapestorebro.github.io/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="Limit">
-  <meta property="og:title" content="Limit — барахолка Костромы в Telegram">
-  <meta property="og:description" content="Локальные объявления, понятные правила и живое сообщество. Присоединяйся к Limit в Telegram. Только 18+.">
+  <meta property="og:title" content="Limit Vape — вейп-барахолка Костромы в Telegram">
+  <meta property="og:description" content="Объявления рядом, репутация участников и живой онлайн. Посмотри, что уже появилось в Limit. Только 18+.">
   <meta property="og:url" content="https://vapestorebro.github.io/">
   <meta property="og:image" content="https://vapestorebro.github.io/logo.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,12 +26,74 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Limit",
-      "url": "https://vapestorebro.github.io/",
-      "description": "Локальное Telegram-сообщество объявлений для совершеннолетних жителей Костромы и области.",
-      "inLanguage": "ru-RU"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Limit Vape",
+          "url": "https://vapestorebro.github.io/",
+          "description": "Вейп-барахолка Костромы и области в Telegram для совершеннолетних пользователей.",
+          "inLanguage": "ru-RU"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Это канал с рекламой или живой чат?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Это локальное сообщество, где участники публикуют объявления, задают вопросы и договариваются напрямую."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Как понять, что продавцу можно доверять?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Проверьте историю общения и репутацию участника, уточните детали до встречи и не отправляйте предоплату незнакомым людям."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Есть ли возрастное ограничение?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Да. Сайт и сообщество предназначены только для пользователей старше 18 лет."
+              }
+            }
+          ]
+        }
+      ]
     }
+  </script>
+
+  <script>
+    (() => {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+
+      const resetToTop = () => {
+        const root = document.documentElement;
+        root.style.scrollBehavior = 'auto';
+        root.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
+        window.scrollTo(0, 0);
+      };
+
+      const enforceTop = () => {
+        resetToTop();
+        requestAnimationFrame(resetToTop);
+        setTimeout(resetToTop, 80);
+      };
+
+      enforceTop();
+      window.addEventListener('pageshow', enforceTop);
+      document.addEventListener('DOMContentLoaded', enforceTop, { once: true });
+      window.addEventListener('load', enforceTop, { once: true });
+      window.addEventListener('beforeunload', resetToTop);
+    })();
   </script>
 
   <style>
@@ -55,7 +118,7 @@
     }
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
       max-width: 100%;
       overflow-x: clip;
     }
@@ -313,22 +376,48 @@
     }
 
     .hero-card {
-      width: min(100%, 430px);
+      width: min(100%, 410px);
       max-width: 100%;
       margin: 0;
       justify-self: end;
-      padding: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 34px;
-      background: #17131d;
-      box-shadow: var(--shadow);
-      transform: none;
+      padding: 9px;
+      border: 1px solid #3a3642;
+      border-radius: 48px;
+      background: #0d0d12;
+      box-shadow:
+        -8px 7px 0 #24212b,
+        -18px 28px 60px rgba(0, 0, 0, 0.52);
+      transform: perspective(1100px) rotateY(-7deg) rotateX(1.5deg) rotateZ(0.7deg);
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    .hero-card::before {
+      position: absolute;
+      top: 22%;
+      right: -6px;
+      width: 5px;
+      height: 92px;
+      border-radius: 0 4px 4px 0;
+      background: #35313c;
+      content: "";
+    }
+
+    .hero-card::after {
+      position: absolute;
+      top: 14%;
+      left: -10px;
+      width: 4px;
+      height: 58px;
+      border-radius: 4px 0 0 4px;
+      background: #302c36;
+      content: "";
     }
 
     .hero-card-inner {
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 24px;
+      border: 1px solid #292631;
+      border-radius: 39px;
       background: #0c0c10;
     }
 
@@ -336,23 +425,8 @@
       display: block;
       width: 100%;
       height: auto;
+      border-radius: 37px;
       background: #0c0c10;
-    }
-
-    .shot-caption {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 14px 16px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.76rem;
-    }
-
-    .shot-caption strong {
-      color: var(--text);
-      font-size: 0.82rem;
     }
 
     .section {
@@ -563,14 +637,11 @@
       padding: 22px 24px;
       border: 1px solid rgba(255, 79, 145, 0.3);
       border-radius: 22px;
-      color: #d7cfdd;
+      color: var(--text);
       background: #17121f;
       font-size: clamp(0.95rem, 2vw, 1.08rem);
+      font-weight: 750;
       text-align: center;
-    }
-
-    .creator-credit strong {
-      color: var(--text);
     }
 
     .creator-credit a {
@@ -631,10 +702,10 @@
       }
 
       .hero-card {
-        width: min(460px, 100%);
+        width: min(400px, 94%);
         justify-self: center;
         margin-inline: auto;
-        transform: none;
+        transform: perspective(1000px) rotateY(-5deg) rotateX(1deg) rotateZ(0.5deg);
       }
 
       .feature-grid {
@@ -705,13 +776,21 @@
       }
 
       .hero-card {
-        width: min(100%, 420px);
+        width: min(94%, 380px);
         padding: 7px;
-        border-radius: 27px;
+        border-radius: 42px;
+        box-shadow:
+          -5px 5px 0 #24212b,
+          -12px 22px 42px rgba(0, 0, 0, 0.48);
+        transform: perspective(900px) rotateY(-3.5deg) rotateX(0.8deg) rotateZ(0.35deg);
       }
 
-      .shot-caption {
-        padding: 12px 13px;
+      .hero-card-inner {
+        border-radius: 34px;
+      }
+
+      .chat-shot {
+        border-radius: 32px;
       }
 
       .section {
@@ -784,37 +863,33 @@
     <section class="hero container" id="top">
       <div class="hero-copy">
         <div class="eyebrow">Кострома и область · Telegram</div>
-        <h1>Барахолка, где объявления <span class="accent">не теряются</span></h1>
-        <p class="lead">Локальное сообщество для совершеннолетних: публикуй объявления, находи нужное рядом и общайся напрямую — с понятными правилами и модерацией.</p>
+        <h1>Вейп-барахолка <span class="accent">Костромы</span> в Telegram</h1>
+        <p class="lead">Объявления от людей рядом, репутация участников, модерация и живой онлайн. Загляни в Limit — возможно, нужное уже появилось в ленте.</p>
         <div class="actions">
           <a class="button button-primary telegram-cta" href="https://t.me/+MUNkwzI-ieoxOGRi" target="_blank" rel="noopener noreferrer" aria-label="Открыть барахолку Limit в Telegram">
             <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 3.4a1.5 1.5 0 0 0-1.55-.24L3.2 9.7c-1.16.45-1.14 1.1-.2 1.38l4.35 1.36 1.68 5.12c.2.58.1.8.7.8.47 0 .68-.21.94-.47l2.1-2.04 4.38 3.23c.8.45 1.38.22 1.58-.75L21.6 4.78c.3-1.18-.45-1.72.1-1.38ZM8.04 12.14l9.92-6.26c.5-.3.95-.14.58.19l-8.2 7.4-.32 3.39-1.98-4.72Z"/></svg>
-            Открыть в Telegram
+            Смотреть объявления
           </a>
-          <a class="button button-secondary" href="#why">Почему Limit</a>
+          <a class="button button-secondary" href="#why">Как устроен Limit</a>
         </div>
         <div class="trust-row" role="group" aria-label="Преимущества">
-          <span>Локально</span>
-          <span>С модерацией</span>
-          <span>Без лишних регистраций</span>
+          <span>1 067 участников</span>
+          <span>638 онлайн</span>
+          <span>Репутация и модерация</span>
         </div>
       </div>
 
       <figure class="hero-card" aria-label="Настоящий скриншот сообщества Limit">
         <div class="hero-card-inner">
           <img class="chat-shot" src="limit-chat.webp" alt="Диалог участников и работа репутации в Telegram-барахолке Limit" width="853" height="1844" fetchpriority="high" decoding="async">
-          <figcaption class="shot-caption">
-            <span><strong>1 067</strong> участников</span>
-            <span><strong>638</strong> онлайн</span>
-          </figcaption>
         </div>
       </figure>
     </section>
 
     <section class="section container" id="why">
       <p class="section-kicker">Почему сюда возвращаются</p>
-      <h2>Всё нужное — без шума и лишних движений</h2>
-      <p class="section-lead">Limit объединяет локальные объявления и живое общение в привычном Telegram. Быстрый вход, понятная лента и люди из твоего города.</p>
+      <h2>Не безликая доска объявлений, а своё сообщество</h2>
+      <p class="section-lead">Limit объединяет объявления и живое общение в привычном Telegram: видно активность участников, можно задать вопрос и договориться без переходов между сервисами.</p>
 
       <div class="feature-grid">
         <article class="feature-card">
@@ -860,12 +935,12 @@
       <div class="cta-panel">
         <div>
           <p class="section-kicker">Limit в Telegram</p>
-          <h2>Не листай мимо — загляни в ленту</h2>
-          <p>Новые объявления появляются в Telegram. Открой сообщество и посмотри, что актуально сегодня в Костроме.</p>
+          <h2>Лучше один раз открыть ленту, чем гадать, что там есть</h2>
+          <p>Новые объявления появляются в течение дня. Перейди в Limit и посмотри, что сейчас обсуждают и предлагают участники из Костромы.</p>
         </div>
         <a class="button button-primary telegram-cta" href="https://t.me/+MUNkwzI-ieoxOGRi" target="_blank" rel="noopener noreferrer">
           <svg class="telegram-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 3.4a1.5 1.5 0 0 0-1.55-.24L3.2 9.7c-1.16.45-1.14 1.1-.2 1.38l4.35 1.36 1.68 5.12c.2.58.1.8.7.8.47 0 .68-.21.94-.47l2.1-2.04 4.38 3.23c.8.45 1.38.22 1.58-.75L21.6 4.78c.3-1.18-.45-1.72.1-1.38ZM8.04 12.14l9.92-6.26c.5-.3.95-.14.58.19l-8.2 7.4-.32 3.39-1.98-4.72Z"/></svg>
-          Перейти в Limit
+          Открыть ленту Limit
         </a>
       </div>
     </section>
@@ -908,8 +983,8 @@
       <span>© <span id="year">2026</span> Limit</span>
     </div>
     <div class="creator-credit">
-      Сайт создал <strong>гений планеты и плейбой Костромы</strong> —
-      <a href="https://t.me/VapeStpreBro" target="_blank" rel="noopener noreferrer">@VapeStpreBro</a>
+      Этот сайт был создан и распространён
+      <a href="https://t.me/VapeStoreBro" target="_blank" rel="noopener noreferrer">VapeStoreBro</a>
     </div>
   </footer>
 
@@ -919,13 +994,6 @@
   </a>
 
   <script>
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    if (!window.location.hash) {
-      window.scrollTo(0, 0);
-      window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
-    }
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
